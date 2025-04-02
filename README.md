@@ -1,110 +1,49 @@
-The Maze project (raycasting)
+# Maze Game (Raycasting)
 
-Background
+## Introduction
 
-This project is a simple 2D maze renderer using raycasting and SDL2. It simulates a first-person perspective of a maze with walls that the player can "see" using raycasting. The player’s position and camera angle are set in the code, and the maze is represented as a 2D array. This project demonstrates the basic principles of raycasting and rendering with SDL2.
-## Features
-- **Raycasting**: Simulates a 3D view of walls based on the player's position and angle.
-- **SDL2**: Used for window creation and graphics rendering.
-- **Modifiable Map**: The maze map is hardcoded in the code and can be easily modified.
-- **Camera Angle**: You can change the angle of the camera before recompiling to see the difference.
+Welcome to the **Maze Game**! This project implements a **2D maze renderer** using the **raycasting technique** to simulate a first-person perspective of the maze. The game does not allow for interactive player movement in real-time, but the camera’s position and angle are customizable in the code. This project showcases the basic principles of **raycasting** and **SDL2** graphics rendering.
+
+This project is a part of my personal development journey and showcases how raycasting works in a 3D-like environment on a 2D plane.
+
+### Author(s)
+- **Thokozane Tshabalala** GitHub: https://github.com/Byte-Master63/Project_Maze
+- **LinkedIn**: [Thokozane Tshabalala LinkedIn Profile](https://www.linkedin.com/in/thokozane-tshabalala-2579a9217/)
+
+### Deployed Project (if applicable)
+- **Deployed Site**: [Link to Deployed Maze Game](https://your-deployed-site-link.com)
+- **Final Blog Article**: [Link to Final Project Blog Article](https://your-blog-link.com)
 
 ## Installation
+git clone https://github.com/Byte-Master63/Project_Maze
 
 ### Prerequisites
 
-Ensure you have the following dependencies installed:
+Before running the Maze Game, make sure you have the following dependencies installed:
 
-- **SDL2**: If SDL2 is not installed on your system, install it with the following:
+- **SDL2**: SDL2 is required for creating the window and rendering graphics.
+  - Install it on **Ubuntu** using:
+    ```bash
+    sudo apt-get install libsdl2-dev
+    ```
 
-  On **Ubuntu**:
-  ```bash
-  sudo apt-get install libsdl2-dev
+- **GCC**: Ensure that GCC (4.8.4 or later) is installed to compile the source code.
 
-Tasks
-Walls !
+### Cloning the Repository
 
-In this first part, you’ll have to:
+To get started, clone the repository to your local machine:
 
-Create a window with SDL2
-Use raycasting to draw walls on your window !
-You don’t need to be able to rotate the camera during the execution in this part, but you must provide a way to change the angle of the camera in your code to see if it works after recompiling it
-The color of the walls must be different from the color of the ground/ceil
-The map doesn’t need to be parsed from a file, but you must provide a way to modify it in your code to see if it works after recompiling it. (e.g. using an array of arrays of integers or characters)
-Orientation
+```bash
+git clone https://github.com/YourUsername/maze-game.git
+cd maze-game
 
-In this part, you must draw a different color depending on the orientation of the walls.
+#Usage
+Maze Layout: The maze layout is represented as a 2D array in the code. Each value indicates whether the cell is a wall (1) or an empty space (0).
 
-You must at least draw walls facing NORTH and SOUTH in a different color from walls facing EAST and WEST
-Rotation
+Camera Angle: The camera’s angle and the player’s position are defined in the code. Modify these values to change the starting point and camera perspective.
 
-You must provide a way to rotate the camera during the execution.
+Map Customization: You can modify the map array in maze.h to design different mazes.
 
-For example, you can rotate the camera when the left,right arrows are pressed on the keyboard
-Or you can rotate the camera when the mouse moves, just like a FPS game !
-Move
+### Licensing
 
-You must provide a way to move the camera during the execution.
-
-For example, you can move the camera when the w,a,s,d keys are pressed on the keyboard
-Ouch !
-
-In this part, you must handle the collisions of the player (yes, let’s call the camera player now, it’s getting serious) with the walls.
-
-The player must not be able to enter walls
-You can make the player slide on the walls instead of just stop it
-Parser
-
-In this part you must implement a parser to get the map from a file.
-
-You are free to define the standards of your map (The character for a wall, the character for nothing, the extension of the file if you want, …)
-Your program will need a parameter to run which will be the path to the map file
-Draw the map
-
-In this part, you must draw the map on the window.
-
-You’re free to draw the map where you want, with the color you want, …
-You must provide a way to enable/disable it during the execution
-Include the player’s line of sight in the map
-Coding style + Documentation
-
-Check if your code fits the Holberton School coding style
-Check if your code is well documented and respect the Holberton School documentation format
-You can check all of this by yourself, just follow the instructions on this repository.
-
-Be careful
-
-The check will be done on each file present on your turn in repository. Even the files that was not required. So don’t forget to always keep your turn in directory clean.
-
-Textures
-
-In this part you have to add textures on your walls !
-
-Multi task !
-
-Add a way to move on several directions and rotate in the same time. Basically in this part you’ll have to handle multiple events on the same frame.
-
-For example, if the keys to move are w,a,s,d:
-
-If the keys w and s are pressed in the same time, the player shouldn’t move,
-If the keys w and d are pressed in the same time, the player should move forward and right in the same time,
-…
-Ground textures
-
-In this part you have to add textures on the ground and/or on the ceiling !
-
-Weapons
-
-Add weapons textures !
-
-Enemies
-
-Add some enemies !
-
-Make it rain
-
-Add rain and a possibility to stop / start the rain with a key.
-
-Extra option
-
-Shadows, special lightning, etc… get creative!
+This project is licensed under the MIT License - see the LICENSE file for details.
